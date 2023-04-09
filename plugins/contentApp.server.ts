@@ -1,5 +1,10 @@
 import contentful from 'contentful';
 import { fetchPageBySlug } from '@content-app/core/dist/index.js';
+import ModuleTeaser from '@content-app/content-module_teaser/content-module.js';
+
+const moduleMapping = {
+  ModuleTeaser,
+}
 
 export default defineNuxtPlugin(() => {
     return {
@@ -12,11 +17,11 @@ export default defineNuxtPlugin(() => {
             });
 
             try {
-              return await fetchPageBySlug({client, slug});  
+              return await fetchPageBySlug({client, slug, moduleMapping});
             } catch (error) {
               console.error(error)
             }
-            
+
         }
       }
     }
