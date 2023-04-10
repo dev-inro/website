@@ -1,6 +1,7 @@
 <template>
     <div class="dynamic-page">
         <TheArticles :articles="page.articles" />
+        <ContactBox />
     </div>
 </template>
 

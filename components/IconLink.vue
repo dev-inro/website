@@ -1,6 +1,7 @@
 <template>
 
   <a class="icon-link" :href="link">
+    <slot name="preIcon"></slot>
     <span class="icon-link__title" v-if="title">{{ title }}</span>
     <div class="icon-link__icon"><slot></slot></div>
   </a>
