@@ -25,7 +25,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3.33341 3.33333H16.6667C17.5834 3.33333 18.3334 4.08333 18.3334 4.99999V15C18.3334 15.9167 17.5834 16.6667 16.6667 16.6667H3.33341C2.41675 16.6667 1.66675 15.9167 1.66675 15V4.99999C1.66675 4.08333 2.41675 3.33333 3.33341 3.33333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M18.3334 5L10.0001 10.8333L1.66675 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            </svg>
 
           </template>
 
