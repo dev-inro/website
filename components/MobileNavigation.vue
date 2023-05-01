@@ -88,5 +88,4 @@
   import { email } from '@/data';
   const { $fetchNavigation } = useNuxtApp();
   const mainNavigation = await useAsyncData('mainNavigation', async () => await $fetchNavigation('main-nav'));
-  console.log(mainNavigation.data._value.childs);
 </script>

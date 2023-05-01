@@ -14,6 +14,7 @@
 <style lang="scss">
 
   .module-image-text {
+    width: 100%;
 
     @include mq($min-width: $tablet) {
       display: flex;
@@ -25,9 +26,11 @@
       flex: 1;
 
 
+
       @include mq($min-width: $tablet) {
         padding: 120px 40px 120px 0;
         display: flex;
+        width: 50%;
         justify-content: end;
       }
     }
@@ -108,6 +111,7 @@
 
       @include mq($min-width: $tablet) {
         object-fit: cover;
+        width: 50%;
       }
     }
 

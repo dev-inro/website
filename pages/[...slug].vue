@@ -2,6 +2,7 @@
     <div class="the-page">
         <TheHeader />
         <DynamicPage v-if="data && data.articles" :page="data" />
+        <TheFooter />
     </div>
 </template>
 
