@@ -1,15 +1,18 @@
 <template>
     <div class="the-page">
-        <TheHeader />
-        <DynamicPage v-if="data && data.articles" :page="data" />
-        <TheFooter />
+
+     <TheHeader />
+    <DynamicPage v-if="data && data.articles" :page="data" />
+    <TheFooter />
+
     </div>
 </template>
 
 <script setup>
-const route = useRoute()
-const { $fetchPageBySlug, $fetchNavigation } = useNuxtApp();
+import useFetchPage from '@/useFetchPage';
+const route = useRoute();
+const { $fetchPageBySlug } = useNuxtApp();
 const slug = !!route?.params?.slug ? '/' + route.params.slug.join('/') : '/';
-const { data } = await useAsyncData(slug, async () => await $fetchPageBySlug(slug));
+const data = await $fetchPageBySlug(slug)
 
 </script>
