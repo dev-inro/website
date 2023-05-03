@@ -10,6 +10,6 @@
 const route = useRoute();
 const { $fetchPageBySlug } = useNuxtApp();
 const slug = !!route?.params?.slug ? '/' + route.params.slug.join('/') : '/';
-const data = useAsyncData(slug, async () => await $fetchPageBySlug(slug));
+const {data} = useAsyncData(slug, async () => await $fetchPageBySlug(slug));
 
 </script>
