@@ -4,6 +4,7 @@ import * as contentful from 'contentful';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   target: 'static',
+  ssr: false,
   hooks: {
     async 'nitro:config'(nitroConfig) {
       if (!nitroConfig) {
@@ -17,7 +18,7 @@ export default defineNuxtConfig({
 
       const pages = await fetchPages({ client });
 
-      
+
 
       nitroConfig.prerender?.routes?.push(...pages);
     }

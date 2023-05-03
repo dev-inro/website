@@ -11,6 +11,6 @@ import useFetchPage from '@/useFetchPage';
 const route = useRoute();
 const { $fetchPageBySlug } = useNuxtApp();
 const slug = !!route?.params?.slug ? '/' + route.params.slug.join('/') : '/';
-const data = await $fetchPageBySlug(slug)
+const data = useAsyncData(slug, () => $fetchPageBySlug(slug));
 
 </script>
