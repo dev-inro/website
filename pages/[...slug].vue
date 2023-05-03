@@ -1,10 +1,8 @@
 <template>
     <div class="the-page">
-
-     <TheHeader />
+    <TheHeader />
     <DynamicPage v-if="data && data.articles" :page="data" />
     <TheFooter />
-
     </div>
 </template>
 
