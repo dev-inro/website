@@ -17,8 +17,6 @@ export default defineNuxtConfig({
 
       const pages = await fetchPages({ client });
 
-
-
       nitroConfig.prerender?.routes?.push(...pages);
     }
   },

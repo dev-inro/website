@@ -3,7 +3,7 @@
   <div class="the-footer">
 
     <div class="the-footer__logo">
-      <TheLogo />
+      <LargeLogo />
     </div>
 
     <div class="the-footer__bottom">
@@ -54,12 +54,17 @@
         display: flex;
         margin-bottom: 0;
         gap: 24px;
+        order: 2;
       }
     }
 
     &__copyright {
       font-weight: 400;
       font-size: 16px;
+
+      @include mq($min-width: $desktop) {
+        order: 1;
+      }
     }
 
     &__link {
