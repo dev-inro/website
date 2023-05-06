@@ -1,7 +1,7 @@
 <template>
     <div class="dynamic-page">
         <TheArticles :articles="page.articles" />
-        <ContactBox />
+        <ContactBox v-if="!page.hide_contactbox" />
     </div>
 </template>
 
