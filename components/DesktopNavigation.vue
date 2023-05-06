@@ -13,8 +13,6 @@
 <style lang="scss">
 
   .desktop-navigation {
-
-
     &__list {
       display: flex;
       gap: 24px;

@@ -1,7 +1,7 @@
 <template>
     <div class="the-article">
         <div class="the-article__inside">
-            <TheModules :modules="article.modules" />
+            <TheModules v-if="article && article.modules" :modules="article.modules" />
         </div>
     </div>
 </template>
@@ -9,20 +9,20 @@
 <style lang="scss">
 
   .the-article {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
     &:first-child {
-      padding-top: 0;
+      margin-top: 0;
     }
 
     &:last-child {
-      padding-bottom: 0;
+      margin-bottom: 0;
     }
 
     @include mq($min-width: $desktop) {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      margin-top: 60px;
+      margin-bottom: 60px;
     }
   }
 
