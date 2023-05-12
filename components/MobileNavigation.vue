@@ -1,7 +1,7 @@
 <template>
   <div class="mobile-navigation">
 
-    <ul class="mobile-navigation__list">
+    <ul class="mobile-navigation__list" v-if="mainNavigation?.data?._value?.childs">
       <li class="mobile-navigation__item" v-for="child of mainNavigation.data._value.childs">
         <div class="mobile-navigation__link">
           <nuxt-link :to="child.url" class="mobile-navigation__link">{{ child.name }}</nuxt-link>

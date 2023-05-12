@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop-navigation">
+  <div class="desktop-navigation" v-if="mainNavigation?.data?._value?.childs">
     <ul class="desktop-navigation__list">
       <li class="desktop-navigation__item" v-for="child of mainNavigation.data._value.childs">
         <div class="desktop-navigation__link">

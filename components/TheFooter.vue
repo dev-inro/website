@@ -8,7 +8,7 @@
 
     <div class="the-footer__bottom">
 
-      <nav class="the-footer__navigation">
+      <nav class="the-footer__navigation" v-if="navigation?.data?._value?.childs">
         <nuxt-link v-for="item in navigation.data._value.childs" class="the-footer__link" :to="item.url">{{ item.name }}</nuxt-link>
       </nav>
 
