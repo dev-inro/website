@@ -1,10 +1,15 @@
 <template>
-
-  <a class="icon-link" :href="link">
+  <a v-if="external" class="icon-link" :href="link">
     <slot name="preIcon"></slot>
     <span class="icon-link__title" v-if="title">{{ title }}</span>
     <div class="icon-link__icon"><slot></slot></div>
   </a>
+
+  <nuxt-link v-else class="icon-link" :to="link">
+    <slot name="preIcon"></slot>
+    <span class="icon-link__title" v-if="title">{{ title }}</span>
+    <div class="icon-link__icon"><slot></slot></div>
+  </nuxt-link>
 
 </template>
 
@@ -25,6 +30,6 @@
 </style>
 
 <script setup>
-  const props = defineProps(['title', 'link']);
-  const { title, link } = props;
+  const props = defineProps(['title', 'link', 'external']);
+  const { title, link, external } = props;
 </script>

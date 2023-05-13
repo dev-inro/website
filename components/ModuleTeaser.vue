@@ -1,6 +1,6 @@
 <template>
   <div class="module-teaser">
-    <TeaserItem v-for="teaser in fields.teaser" :key="teaser.sys.id" class="module-teaser__teaser-item" :title="teaser.fields.title" :text="teaser.fields.text" :link="teaser.fields.link" />
+    <TeaserItem v-for="teaser in fields.teaser" :key="teaser.sys.id" class="module-teaser__teaser-item" :title="teaser.fields.title" :text="teaser.fields.text" :link="teaser.fields.link" :pageLink="teaser.fields.pageLink" :linkText="teaser.fields.linkText" />
   </div>
 </template>
 

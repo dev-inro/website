@@ -4,7 +4,7 @@
       <h3 v-if="title" class="teaser-item__title">{{ title }}</h3>
       <p v-if="text" class="teaser-item__text">{{ text }}</p>
     </div>
-    <IconLink v-if="link" class="teaser-item__link" :link="link" :title="title">
+    <IconLink v-if="link || pageLink.fields.slug" class="teaser-item__link" :link="link || pageLink.fields.slug" :title="linkText">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4.16669 10H15.8334" stroke="#1F2B38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M10 4.16666L15.8333 9.99999L10 15.8333" stroke="#1F2B38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -54,6 +54,6 @@
 </style>
 
 <script setup>
-  const props = defineProps(['title', 'text', 'link']);
-  const { title, text, link } = props;
+  const props = defineProps(['title', 'text', 'link', 'pageLink', 'linkText']);
+  const { title, text, link, pageLink, linkText } = props;
 </script>
