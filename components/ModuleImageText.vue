@@ -5,7 +5,9 @@
     <div class="module-image-text__content">
       <div class="module-image-text__text" v-html="html" />
     </div>
-    <img class="module-image-text__image" :src="image.fields.file.url" :alt="image.fields?.title || image.fields?.description || image.fields.file.fileName" />
+    <div class="module-image-text__image-container">
+      <img class="module-image-text__image" :src="image.fields.file.url" :alt="image.fields?.title || image.fields?.description || image.fields.file.fileName" />
+    </div>
 
   </div>
 
@@ -15,23 +17,22 @@
 
   .module-image-text {
     width: 100%;
-
-    @include mq($min-width: $tablet) {
-      display: flex;
-    }
+    position: relative;
 
     &__content {
       background-color: $light-grey;
       padding: 80px $side-gap;
-      flex: 1;
-
 
 
       @include mq($min-width: $tablet) {
-        padding: 120px 40px 120px 0;
-        display: flex;
         width: 50%;
-        justify-content: end;
+        padding: 120px 40px 120px 25px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      @include mq($min-width: $desktop) {
+        padding: 120px 40px 120px 0;
       }
     }
 
@@ -104,15 +105,19 @@
       }
     }
 
-    &__image {
-      flex: 1;
-      width: 100%;
-      height: auto;
+    &__image-container {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+    }
 
-      @include mq($min-width: $tablet) {
-        object-fit: cover;
-        width: 50%;
-      }
+    &__image {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      object-fit: cover;
     }
 
   }

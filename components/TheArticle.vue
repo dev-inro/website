@@ -12,10 +12,6 @@
     margin-top: 40px;
     margin-bottom: 40px;
 
-    &:first-child {
-      margin-top: 0;
-    }
-
     &:last-child {
       margin-bottom: 0;
     }

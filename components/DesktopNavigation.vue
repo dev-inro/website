@@ -1,7 +1,7 @@
 <template>
-  <div class="desktop-navigation" v-if="mainNavigation?.data?._value?.childs">
+  <div class="desktop-navigation" v-if="mainNavigation?.data?.value?.childs">
     <ul class="desktop-navigation__list">
-      <li class="desktop-navigation__item" v-for="child of mainNavigation.data._value.childs">
+      <li class="desktop-navigation__item" v-for="child of mainNavigation.data.value.childs">
         <div class="desktop-navigation__link">
           <nuxt-link :to="child.url" class="desktop-navigation__link">{{ child.name }}</nuxt-link>
         </div>

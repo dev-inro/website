@@ -1,8 +1,8 @@
 <template>
   <div class="mobile-navigation">
 
-    <ul class="mobile-navigation__list" v-if="mainNavigation?.data?._value?.childs">
-      <li class="mobile-navigation__item" v-for="child of mainNavigation.data._value.childs">
+    <ul class="mobile-navigation__list" v-if="mainNavigation?.data?.value?.childs">
+      <li class="mobile-navigation__item" v-for="child of mainNavigation.data.value.childs">
         <div class="mobile-navigation__link">
           <nuxt-link :to="child.url" class="mobile-navigation__link">{{ child.name }}</nuxt-link>
           <svg class="mobile-navigation__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

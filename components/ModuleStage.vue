@@ -17,8 +17,16 @@
 
 <style lang="scss">
 
-    $small-image-height: 280px;
-    $large-image-height: 480px;
+  $small-image-height: 280px;
+  $large-image-height: 480px;
+
+  .the-articles .the-article:first-child .module-stage:first-child {
+    margin-top: -40px;
+
+    @include mq($min-width: $desktop) {
+      margin-top: -60px;
+    }
+  }
 
   .module-stage {
     color: $white;
