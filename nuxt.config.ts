@@ -3,7 +3,27 @@ import * as contentful from 'contentful';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      link: [
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
+        { rel: 'manifest', href: '/favicon/site.webmanifest' },
+        { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#5bbad5' }
+      ],
+      meta: [
+        { name: 'msapplication-TileColor', content: '#da532c' },
+        { name: 'theme-color', content: '#ffffff' }
+      ]
+    }
+  },
   target: 'static',
+  extends: [
+    'nuxt-seo-kit'
+  ],
   hooks: {
     async 'nitro:config'(nitroConfig) {
       if (!nitroConfig) {
@@ -40,5 +60,13 @@ export default defineNuxtConfig({
     families: {
       Inter: [400, 600, 700],
     }
-  }
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.inro-consulting.de/',
+      siteName: 'inro engineering & consulting GmbH',
+      siteDescription: 'Ihrem BauStatiker und BauPhysiker in Lindlar, Bergisch Gladbach, Köln und Umgebung.',
+      language: 'de',
+    }
+  },
 })
