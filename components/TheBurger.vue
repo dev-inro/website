@@ -29,6 +29,10 @@ const toggleMenu = () => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @include mq($min-width: $desktop) {
+    display: none;
+  }
 }
 
 .burger-menu .burger {

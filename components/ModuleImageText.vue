@@ -37,6 +37,7 @@
     }
 
     &__text {
+      width: 100%;
       max-width: ($max-width / 2) - 20px;
 
       > * {
@@ -106,11 +107,16 @@
     }
 
     &__image-container {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 50%;
-      height: 100%;
+      width: 100%;
+
+      @include mq($min-width: $tablet) {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+      }
+
     }
 
     &__image {

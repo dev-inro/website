@@ -51,13 +51,9 @@
       }
     }
 
-    &__the-burger {
-      @include mq($min-width: $desktop) {
-        display: none;
-      }
-    }
-
     &__mobile-navigation {
+      transform: translateY(100%);
+
       &--active {
         transform: translateY(0);
       }

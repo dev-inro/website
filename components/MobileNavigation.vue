@@ -42,7 +42,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
 
     &__list {
