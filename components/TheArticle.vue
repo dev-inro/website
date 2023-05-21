@@ -2,6 +2,7 @@
     <div class="the-article">
         <div class="the-article__inside">
             <TheModules v-if="article && article.modules" :modules="article.modules" />
+            <slot></slot>
         </div>
     </div>
 </template>
