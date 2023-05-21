@@ -60,14 +60,14 @@
     }
 
     &__email {
-      display: none;
+      display: none !important;
 
       @include mq($min-width: $desktop) {
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        display: flex;
+        display: flex !important;
       }
     }
 
