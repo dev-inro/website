@@ -85,6 +85,7 @@
       font-size: 24px;
       line-height: 32px;
       font-weight: 600;
+      color: $white;
 
       @include mq($min-width: $desktop) {
         font-size: 32px;
